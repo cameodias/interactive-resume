@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Personal Information Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h1 class="animated-name">Cameo Dias</h1>
+            <h2>Eecronics and Computer Science Student</h2>
+            <p>Passionate about web development and creating interactive experiences. Currently pursuing my degree while building practical skills through projects.</p>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> diascameo@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +91 9322326577</p>
+                <p><i class="fas fa-map-marker-alt"></i> Mumbai, Maharashtra</p>
+            </div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/cameo-dias-"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/cameodias"><i class="fab fa-github"></i></a>
+            
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Bachelor of Engineering in Electronics Computer Science</h3>
+                    <h4>FR. Concacieo Rodrigues College of Engineering</h4>
+                    <p class="date">2023 - 2026</p>
+                    <p class="details">GPA: 7.0/10.0</p>
+                    <button class="btn-more">Show Courses</button>
+                    <div class="more-info">
+                        <ul>
+                            <li>Node.js
+                                <a href="Node.js certifiacte.pdf" target="_blank" class="cert-link">
+                                    <i class="fas fa-certificate"></i> View Certificate
+                                </a>
+                            </li>
+                                <p>Infosys: Fundamentals of Information Securtiy
+                                    <a href="fundamentals of Information security certificate.pdf" target="_blank" class="cert-link">
+                                        <i class="fas fa-certificate"></i> View Certificate
+                                    </a>
+                                </p>
+                                <p>Infosys: CSS3
+                                    <a href="CSS3  certificate.pdf" target="_blank" class="cert-link">
+                                        <i class="fas fa-certificate"></i> View Certificate
+                                    </a>
+                                </p>
+                                <p>MathWorks: MATLAB Onramp
+                                    <a href="matlab certificate.pdf" target="_blank" class="cert-link">
+                                        <i class="fas fa-certificate"></i> View Certificate
+                                    </a>
+                                </p>
+                                <p>MathWorks: Image Processing
+                                    <a href="image processing certificate.pdf" target="_blank" class="cert-link">
+                                        <i class="fas fa-certificate"></i> View Certificate
+                                    </a>
+                                </p>
+                                <p>MathWorks: Machine Learning
+                                    <a href="machine learningcertificate.pdf" target="_blank" class="cert-link">
+                                        <i class="fas fa-certificate"></i> View Certificate
+                                    </a>
+                                </p>
+                                <p>MathWorks: Deep Learning
+                                    <a href="deep learning certificate.pdf" target="_blank" class="cert-link">
+                                        <i class="fas fa-certificate"></i> View Certificate
+                                    </a>
+                                </p>
+                        </ul>
+                    </div>
+                    <h4>Diploma: Government Polytechnic Mumbai, 2020-2023</h4>
+                    <h4>Secondary School Certificate: Holy cross convent school, 2020</h4>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2>Work Experience</h2>
+            <div class="experience-item">
+                <h3>Full Stack Web Development Intern</h3>
+                <h4>ENATS | Nalla-sopara west Mumbai, Maharashtra.</h4>
+                <p class="date">Jan 2023-Jun 2023 </p>
+                <ul>
+                    <li>Developed responsive web applications</li>
+                    <li>Collaborated with team on UX improvements</li>
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skill-item" data-level="85">
+                    <span>HTML/CSS</span>
+                    <div class="skill-bar">
+                        <div class="skill-level"></div>
+                    </div>
+                </div>
+                <div class="skill-item" data-level="75">
+                    <span>JavaScript</span>
+                    <div class="skill-bar">
+                        <div class="skill-level"></div>
+                    </div>
+                </div>
+                <div class="skill-item" data-level="70">
+                    <span>Node.js</span>
+                    <div class="skill-bar">
+                        <div class="skill-level"></div>
+                    </div>
+                </div>
+                <div class="skill-item" data-level="65">
+                    <span>Python</span>
+                    <div class="skill-bar">
+                        <div class="skill-level"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Expense Tracker</h3> 
+                    <button class="btn-demo">View Demo</button>
+                    <div class="project-modal">
+                        <div class="modal-content">
+                            <span class="close-modal">&times;</span>
+                            <h3>Expense Tracker</h3>
+                            <p>A online Expense Tracker web application which calculate the expenses. </p>
+                            <p>Developed with HTML, CSS, JavaScript, PHP mysql.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Tic-Tac-Toe</h3> 
+                    <button class="btn-demo">View Demo</button>
+                    <div class="project-modal">
+                        <div class="modal-content">
+                            <span class="close-modal">&times;</span>
+                            <h3>Tic-Tac-Toe</h3>
+                            <p>Online Tic-Tac-Toe web application game.</p>
+                            <p>Developed using HTML, CSS, JavaScript.</p>
+                            <a href="https://cameodias.github.io/Tic-Tac-Toe-game/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Personal Portfolio</h3> 
+                    <button class="btn-demo">View Demo</button>
+                    <div class="project-modal">
+                        <div class="modal-content">
+                            <span class="close-modal">&times;</span>
+                            <h3>Personal Portfolio</h3>
+                            <p>Developed using HTML, CSS, JavaScript.</p>
+                            <a href="https://cameodias.github.io/portfolio/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>INFRAGUARD: A structural health monnitoring and maintenance</h3>
+                    
+                    <button class="btn-demo">View Demo</button>
+                    <div class="project-modal">
+                        <div class="modal-content">
+                            <span class="close-modal">&times;</span>
+                            <h3>INFRAGUARD: A structural health monnitoring and maintenance</h3>
+                            <p>Hardware-based project using sensors and an ESP32 board to monitor and maintain the overall health of structure.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>IoT-BASED WEATHER STATION</h3> 
+                    <button class="btn-demo">View Demo</button>
+                    <div class="project-modal">
+                        <div class="modal-content">
+                            <span class="close-modal">&times;</span>
+                            <h3>IoT-BASED WEATHER STATION</h3>
+                            <p>Hardware-based project using sensors and an ESP32 board to monitor and update live weather data through the Blynk app.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form id="contact-form" action="https://formspree.io/f/xblgqajj" method="POST">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="_replyto" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
