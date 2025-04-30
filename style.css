@@ -2,7 +2,7 @@
 :root {
     --primary-color: #5a8eb1;
     --secondary-color: #2c3e50;
-    --accent-color: #e74c3c;
+    --accent-color: #2e52a0;
     --light-color: #ecf0f1;
     --dark-color: #2c3e50;
     --text-color: #333;
@@ -281,7 +281,7 @@ h1, h2, h3, h4 {
 }
 
 .btn-submit:hover {
-    background-color: #2980b9;
+    background-color: #1d2480;
 }
 
 /* Animations */
