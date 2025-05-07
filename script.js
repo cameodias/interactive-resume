@@ -1,4 +1,25 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Menu Toggle
+    const menuToggle = document.createElement('div');
+    menuToggle.className = 'menu-toggle';
+    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+    document.getElementById('navbar').prepend(menuToggle);
+    
+    const navList = document.querySelector('#navbar ul');
+    
+    menuToggle.addEventListener('click', function() {
+        navList.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('#navbar ul li a').forEach(link => {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                navList.classList.remove('active');
+            }
+        });
+    });
+
     // Smooth scrolling for navigation links
     document.querySelectorAll('nav a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
@@ -69,12 +90,14 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', function() {
             const modal = this.nextElementSibling;
             modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
         });
     });
 
     document.querySelectorAll('.close-modal').forEach(button => {
         button.addEventListener('click', function() {
             this.closest('.project-modal').style.display = 'none';
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
         });
     });
 
@@ -83,6 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
         modal.addEventListener('click', function(e) {
             if (e.target === this) {
                 this.style.display = 'none';
+                document.body.style.overflow = 'auto';
             }
         });
     });
@@ -91,8 +115,27 @@ document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contact-form');
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        alert('Thank you for your message! I will get back to you soon.');
-        this.reset();
+        const formData = new FormData(this);
+        
+        fetch(this.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                alert('Thank you for your message! I will get back to you soon.');
+                this.reset();
+            } else {
+                throw new Error('Network response was not ok');
+            }
+        })
+        .catch(error => {
+            alert('There was a problem sending your message. Please try again later.');
+            console.error('Error:', error);
+        });
     });
 
     // Name animation on load
@@ -104,28 +147,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 10);
     }, 1500);
 });
-
-document.getElementById("contact-form").addEventListener("submit", function(e) {
-    e.preventDefault(); // Prevent page reload
-    const form = e.target;
-    const formData = new FormData(form);
-  
-    fetch(form.action, {
-      method: "POST",
-      body: formData,
-      headers: {
-        Accept: "application/json",
-      },
-    })
-      .then((response) => {
-        if (response.ok) {
-          alert("Message sent successfully!");
-          form.reset(); // Clear form
-        } else {
-          throw new Error("Failed to send message");
-        }
-      })
-      .catch((error) => {
-        alert("Error: " + error.message);
-      });
-  });
